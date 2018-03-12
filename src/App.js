@@ -1,30 +1,15 @@
 import React, { Component } from 'react';
-import Navigation from './components/Navigation';
-import Carousel from './components/Carousel';
+import HomePage from './components/HomePage';
+import Login from './components/Login';
+import { Route } from 'react-router-dom';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="row">
-            <div className="col-xs-8">
-              <Navigation />  
-            </div>
-        </div>
-        <hr/>
-        <div className="row">
-            <div className="col-3">
-              <h2>I am the first column in the grid</h2>
-            </div>
-         
-            <div className="col-6">
-              <Carousel /> 
-            </div>
-
-            <div className="col-3">
-            <h2>I am the last column in the grid</h2> 
-            </div>
-        </div>  
+      <div>
+        <Route path="./components/HomePage" exact component={HomePage}/>
+        <Route path="./components/login" component={Login}/>
       </div>
   );
   }
